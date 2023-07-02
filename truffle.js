@@ -2,7 +2,7 @@
 require('babel-register')
 
 var HDWalletProvider = require('truffle-hdwallet-provider')
-var mnemonic = 'lend own enable zero cannon extra track run defense grid maple misery'
+var mnemonic = ''
 
 
 module.exports = {
