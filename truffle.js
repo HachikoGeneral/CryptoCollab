@@ -2,7 +2,7 @@
 require('babel-register')
 
 var HDWalletProvider = require('truffle-hdwallet-provider')
-var mnemonic = ''
+var mnemonic = 'lend own enable zero cannon extra track run defense grid maple misery'
 
 
 module.exports = {
@@ -12,12 +12,21 @@ module.exports = {
       port: 8545,
       network_id: '*'
     },
-    mainnet: {
+    kovan: {
       provider: function() {
-        return new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/')
+        return new HDWalletProvider(mnemonic, 'http://70.34.216.42:9933')
       },
-      network_id: 1,
+      network_id: 42,
       gasPrice: 6000000000
+}
+},
+ solidity: {
+    version: "0.5.16",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
     } 
   }
 };
